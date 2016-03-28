@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawerMenuHome"
+            android:title="如有疑问"/>
+        <item
+            android:id="@+id/drawerMenuCategory"
+            android:title="请联系："/>
+        <item
+            android:id="@+id/drawerMenuFeedback"
+            android:title="QQ: 676585681"/>
+        <item
+            android:id="@+id/drawerMenuSetting"
+            android:title="email: i.zp@qq.com"/>
+    </group>
+</menu>

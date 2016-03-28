@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.izp.manzifinal"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "0.8"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled true // 是否混淆
+            shrinkResources true // 是否去除无效的资源文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),'debug-proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true // 是否混淆
+            shrinkResources true // 是否去除无效的资源文件
+            // 混淆的配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }//会删除lib中没有用到的类
+    }//混淆会自动优化代码
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.github.kingideayou:tagcloudview:1.0.2'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:cardview-v7:23.2.1'
+    compile 'com.android.support:support-v4:23.2.1'
+    compile project(':LibMarsdaemon')
+}

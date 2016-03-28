@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardItemTodo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="8dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="2dp"
+    app:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:id="@+id/contentItemTodo"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_height="wrap_content">
+            <!--在所有的控件前面有一个来自于minimal的圆形图标控件
+            识别首字，并本设置颜色-->
+            <ImageView
+                android:id="@+id/circleImageTodo"
+                android:foregroundGravity="center"
+                android:layout_centerVertical="true"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <TextView
+                android:id="@+id/titleItemTodo"
+                android:layout_toEndOf="@id/circleImageTodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="8"
+                android:maxLines="2"
+                android:textSize="18sp"
+                android:text="任务名称"
+                android:layout_toRightOf="@id/circleImageTodo"
+                android:paddingLeft="8dp" />
+            <TextView
+                android:id="@+id/progressItemTodo"
+                android:paddingLeft="8dp"
+                android:layout_below="@id/titleItemTodo"
+                android:layout_alignStart="@id/titleItemTodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="任务进度"
+                android:layout_alignLeft="@id/titleItemTodo" />
+            <TextView
+                android:id="@+id/createTimeItemTodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:paddingTop="3dp"
+                android:layout_alignParentEnd="true"
+                android:text="创建时间"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:id="@+id/showProgressItemTodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/createTimeItemTodo"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="3dp"
+                android:text="进度%"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:id="@+id/weightItemTodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressItemTodo"
+                android:paddingLeft="8dp"
+                android:layout_alignStart="@id/progressItemTodo"
+                android:text="目前分数"
+                android:layout_alignLeft="@id/progressItemTodo" />
+            <TextView
+                android:id="@+id/showWeightItemTodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:layout_below="@id/showProgressItemTodo"
+                android:layout_alignParentEnd="true"
+                android:text="250"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:id="@+id/todoRemark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weightItemTodo"
+                android:layout_alignStart="@+id/weightItemTodo"
+                android:paddingLeft="8dp"
+                android:paddingTop="3dp"
+                android:text="任务备注"
+                android:layout_alignLeft="@+id/weightItemTodo" />
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/remarkSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/showWeightItemTodo"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+            <ViewStub
+                android:id="@+id/todoRemarkView"
+                android:layout_below="@id/remarkSwitch"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginStart="67dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/todo_remark"
+                android:layout_marginLeft="100dp" />
+        </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

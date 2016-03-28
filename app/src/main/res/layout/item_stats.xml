@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="178dp"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:id="@+id/contentItemStats"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:id="@+id/circleImageStats"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:foregroundGravity="center"/>
+        <!--显示日周月年信息-->
+        <TextView
+            android:id="@+id/count"
+            android:paddingTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/circleImageStats"
+            android:textSize="18dp" />
+        <TextView
+            android:id="@+id/showCount"
+            android:paddingTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/circleImageStats"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/count"
+            android:textSize="18dp" />
+        <TextView
+            android:paddingTop="8dp"
+            android:id="@+id/progressItemStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/count" />
+        <TextView
+            android:id="@+id/showProgressStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:layout_below="@id/showCount"
+            android:layout_alignBottom="@id/progressItemStats"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
